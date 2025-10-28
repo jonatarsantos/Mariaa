@@ -1,248 +1,151 @@
-/* Resetando margens e padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo do site */
-body {
-  font-family: Arial, sans-serif;
-  background-color: black;
-  color: #333;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #eb1c1c;
-  color: black;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #131212;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Seções do site */
-.filmes, .generos, .detalhes-filme, .contato, .sobre {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Seção de filmes */
-.filmes {
-  display: flex;
-  justify-content: space-around; /* Espaçamento entre os cards de filmes */
-  padding: 5px;
-  flex-wrap: wrap; /* Permite que os cards se ajustem em diferentes linhas se o espaço não for suficiente */
-  gap: 5px; /* Espaço entre os filmes */
-}
-
-.filme-card {
-  background-color: white;
-  width: 250px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease; /* Para efeito de hover */
-}
-
-.filme-card img {
-  width: 100%;  /* Imagem vai ocupar toda a largura do card */
-  height: auto;
-  border-radius: 8px;
-}
-
-.filme-card:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-button {
-  background-color: #333;
-  color: #0e0303;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #080606;
-  margin-top: 20px;
-}
-
-/* Estilo para o formulário de contato */
-form {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-form button {
-  width: 100%;
-}
-
-/* Estilo geral */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #110d0d;
-  color: #333;
-  margin: 0;
-  padding: 40px 20px;
-}
-
-/* Container centralizado */
-.contato-container {
-  max-width: 600px;
-  margin: auto;
-  background-color: rgb(17, 16, 16);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-/* Título */
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-/* Labels e campos */
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #1b1919;
-  border-radius: 5px;
-}
-
-/* Botão */
-button {
-  margin-top: 20px;
-  background-color: #cf0e0e;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
 /* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Corpo */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffefe;
-  padding: 20px;
-  color: #333;
-}
-
-/* Cabeçalho */
-header h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5em;
+  background: #f0f4f8;
   color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
 }
 
-/* Container dos gêneros */
-.genero-container {
+header h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Cartão de gênero */
-.genero-card {
-  background: rgb(243, 243, 243);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.genero-card:hover {
-  transform: scale(1.03);
-}
-
-.genero-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  max-width: 900px;
 }
 
-.genero-card h2 {
-  margin: 15px 0 10px;
-  color: #2c3e50;
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.genero-card p {
-  padding: 0 15px 20px;
-  font-size: 0.95em;
-  color: #666;
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-/* Rodapé */
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* Hover efeito */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Cores por área */
+.linguagens {
+  border-left: 6px solid #f39c12; /* laranja */
+}
+
+.humanas {
+  border-left: 6px solid #2980b9; /* azul */
+}
+
+.natureza {
+  border-left: 6px solid #27ae60; /* verde */
+}
+
+.matematica {
+  border-left: 6px solid #8e44ad; /* roxo */
+}
+
+/* Responsividade */
+@media(max-width: 500px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+}
+.area-container {
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 30px 30px 40px 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.area-container section h2 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.area-container section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
 footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #777;
+  max-width: 800px;
+  margin-bottom: 40px;
 }
 
+.voltar {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.voltar:hover {
+  color: #1c5980;
+}
+
+/* Cores diferentes por área */
+.linguagens h1 {
+  color: #f39c12;
+}
+
+.humanas h1 {
+  color: #2980b9;
+}
+
+.natureza h1 {
+  color: #27ae60;
+}
+
+.matematica h1 {
+  color: #8e44ad;
+}
